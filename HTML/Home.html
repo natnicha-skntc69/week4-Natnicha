@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Login Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>WELCOME</h1>
+    <p>เข้าสู่ระบบและสมัครสมาชิก</p>
+
+    <div class="menu">
+        <button onclick="showLogin()">LOGIN</button>
+        <button onclick="showRegister()">REGISTER</button>
+    </div>
+
+    <form id="loginForm" class="form">
+
+        <h2>LOGIN</h2>
+
+        <label>Username</label>
+        <input type="text" name="username" placeholder="กรอก Username" required>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="กรอก Password" required>
+
+        <button type="submit">Login</button>
+        <button type="reset" class="reset">Reset</button>
+
+    </form>
+
+    <form id="registerForm" class="form" style="display:none;">
+
+        <h2>REGISTER</h2>
+
+        <label>ชื่อ-นามสกุล</label>
+        <input type="text" name="fullname" placeholder="ชื่อ-นามสกุล" required>
+
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Username" required>
+
+        <label>วัน/เดือน/ปี เกิด</label>
+        <input type="date" name="birthday" required>
+
+        <label>อายุ</label>
+        <input type="number" name="age" placeholder="อายุ" min="1" required>
+
+        <label>รหัสประจำตัวนักศึกษา</label>
+        <input type="text" name="student_id" placeholder="รหัสนักศึกษา" required>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email" required>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <label>Confirm Password</label>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
+        <button type="submit">Register</button>
+        <button type="reset" class="reset">Reset</button>
+
+    </form>
+
+</div>
+
+<script>
+
+function showLogin() {
+    document.getElementById("loginForm").style.display = "block";
+    document.getElementById("registerForm").style.display = "none";
+}
+
+function showRegister() {
+    document.getElementById("loginForm").style.display = "none";
+    document.getElementById("registerForm").style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
